@@ -8,8 +8,8 @@ const http = require('http');
 const https = require('https');
 const url = require('url');
 const { StringDecoder } = require('string_decoder');
-const config = require('./config');
-const routes = require('./routes');
+const config = require('./lib/config');
+const routes = require('./lib/routes');
 
 /**
  * All the server logic for both HTTP and HTTPS servers
