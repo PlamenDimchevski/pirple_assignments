@@ -8,6 +8,10 @@ In master will merged the latest assignment.
 ## Completed Assignment.
 * Homework Assignment #1
    * Present in branch `assignment-1`
+   * When request `localhost:3000/hello` will receive `{"message":"Hello World!"}`
+   * When request `localhost:3000/hello?name=Plamen` will receive `{"message":"Hello Plamen!"}`
+   * When request `localhost:3000/hello` with body/payload contains the following JSON `{"name" : "Earle"}` will receive `{"message":"Hello Earle!"}`
+   * If passed both a query parameter and body (for example using tool like postman), it will use the body. The body parameter is with higher priority
 
 
 * * *
