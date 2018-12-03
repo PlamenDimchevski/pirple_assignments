@@ -10,6 +10,7 @@ const url = require('url');
 const { StringDecoder } = require('string_decoder');
 const config = require('./lib/config');
 const routes = require('./lib/routes');
+const helpers = require('./lib/helpers');
 
 /**
  * All the server logic for both HTTP and HTTPS servers
@@ -57,7 +58,7 @@ const serverManager = function( request, response ) {
       const data = {
          'path' : trimed_path,
          'query' : query_string_object,
-         'payload' : buffer,
+         'payload' : helpers.parseJsonToObject( buffer ),
          method,
          headers,
       };
