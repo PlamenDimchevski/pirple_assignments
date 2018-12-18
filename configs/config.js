@@ -13,6 +13,11 @@ const https_server_options = {
    'cert': fs.readFileSync('./https/cert.pem'),
 };
 
+// Determine which environment was passed as a command-line argument
+const node_env = process.env.NODE_ENV;
+const node_debug = process.env.NODE_DEBUG;
+const current_environment = typeof( node_env ) == 'string' ? node_env.toLowerCase() : '';
+
 // Container for all the environments
 const environments = {};
 
@@ -22,12 +27,7 @@ environments.staging = {
    'https_port' : 3001,
    'node_env' : 'staging',
    'hashing_secret' : 'thisIsASecret',
-   'max_checs' : 5,
-   'twilio' : {
-      'accountSid' : 'ACb32d411ad7fe886aac54c665d25e5c5d',
-      'authToken' : '9455e3eb3109edc12e3d8c92768f7a67',
-      'fromPhone' : '+15005550006'
-   },
+   'log_compression_interval' : 1000 * 60 * 60, // Once per hour
 };
 
 // Production environment
@@ -36,17 +36,8 @@ environments.production = {
    'https_port' : 5001,
    'node_env' : 'production',
    'hashing_secret' : 'thisIsASecret',
-   'max_checs' : 5,
-   'twilio' : {
-      'accountSid' : '',
-      'authToken' : '',
-      'fromPhone' : ''
-   },
+   'log_compression_interval' : 1000 * 60 * 60 * 24, // Once per day
 };
-
-// Determine which environment was passed as a command-line argument
-const node_env = process.env.NODE_ENV;
-const current_environment = typeof( node_env ) == 'string' ? node_env.toLowerCase() : '';
 
 // Check that the current environment is one of the environments above, if not default to staging
 const environment_to_export = typeof( environments[ current_environment ] ) == 'object' ? environments[ current_environment ] : environments.staging;
@@ -54,7 +45,11 @@ const environment_to_export = typeof( environments[ current_environment ] ) == '
 // Export the module
 module.exports = {
    ...environment_to_export,
+   // If we debugging the workers, regardless of the env, run the workers loop every minute
+   log_compression_interval : node_debug == 'workers' ? 1000 * 60 : environment_to_export.log_compression_interval,
    https_server_options,
    base_dir : path.join(__dirname, '/../'),
    data_dir : path.join(__dirname, '/../.data/'),
+   logs_dir : path.join(__dirname, '/../.logs/'),
+   config_dir : path.join(__dirname, '/../.configs/'),
 };

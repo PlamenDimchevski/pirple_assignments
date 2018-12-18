@@ -14,5 +14,17 @@ In master will merged the latest assignment.
    * If passed both a query parameter and body (for example using tool like postman), it will use the body. The body parameter is with higher priority
 
 
+
+
+
+
+
+Resturant JSON from https://codebeautify.org/jsonviewer/cb51497a
+
+
+
+
+
+
 * * *
 PS. English is not my native and I didn't check for spelling errors in code comments and `.md` files, so have a nice laugh if you find stupid mistakes :)

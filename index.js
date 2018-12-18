@@ -1,13 +1,13 @@
 /**
  *
- * Primary file for the API
+ * Primary file for the APP
  */
 
 // Dependencies
 const server = require('./lib/server');
 const workers = require('./lib/workers');
 
-// Declare the app
+// Declare the APP
 const app = {};
 
 // Init function

@@ -1,2 +1,4 @@
 .data/users/*.json
 .data/tokens/*.json
+.logs/*.log
+.logs/*.gz.b64
