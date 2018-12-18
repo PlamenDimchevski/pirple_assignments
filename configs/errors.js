@@ -11,6 +11,7 @@ const CODES = {
    FAIL_GZIP_FILE : 10,
    FAIL_UNGZIP_FILE : 11,
    FAIL_PASSWORD_HASH : 12,
+   FAIL_TOKEN_VERIFICATION : 13,
 };
 
 const ERROR_MESSAGES = {
@@ -37,6 +38,8 @@ const ERROR_MESSAGES = {
    [ CODES.FAIL_UNGZIP_FILE ] : 'Can\'t unzip the compress file: ',
 
    [ CODES.FAIL_PASSWORD_HASH ] : 'Could not hash the user password: ',
+
+   [ CODES.FAIL_TOKEN_VERIFICATION ] : 'Missing required token in header, or token is invalid. ',
 };
 
 const MESSAGES = Object.keys( ERROR_MESSAGES ).reduce(
@@ -50,6 +53,7 @@ const MESSAGES = Object.keys( ERROR_MESSAGES ).reduce(
    {}
 );
 
+// Export the module
 module.exports = {
    ...MESSAGES,
    CODES,
