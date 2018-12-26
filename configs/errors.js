@@ -12,6 +12,7 @@ const CODES = {
    FAIL_UNGZIP_FILE : 11,
    FAIL_PASSWORD_HASH : 12,
    FAIL_TOKEN_VERIFICATION : 13,
+   NO_TOKEN_IN_HEADER : 14,
 };
 
 const ERROR_MESSAGES = {
@@ -40,6 +41,8 @@ const ERROR_MESSAGES = {
    [ CODES.FAIL_PASSWORD_HASH ] : 'Could not hash the user password: ',
 
    [ CODES.FAIL_TOKEN_VERIFICATION ] : 'Missing required token in header, or token is invalid. ',
+
+   [ CODES.NO_TOKEN_IN_HEADER ] : 'No token was provided in the header. ',
 };
 
 const MESSAGES = Object.keys( ERROR_MESSAGES ).reduce(
