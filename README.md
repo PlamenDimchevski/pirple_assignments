@@ -206,8 +206,29 @@ For more details, see the alias option for given API call.
          * with alias
          `localhost:3000/token/00000000000000000000000`
 
+###### Menu module
+This module provides a static JSON containing a small part of the pizza menu from dominos.
+All routes for this module will respond only on a `get` method
 
+   * Path `menu`
+      * link `localhost:3000/menu`
+      * returns the full menu JSON 
 
+   * Path `menu/categories`
+      * link `localhost:3000/menu/categories`
+      * returns the list of categories in the menu JSON
+
+   * Path `menu/items`
+      * link `localhost:3000/menu/items`
+      * returns the list of all items in the menu JSON
+
+   * Path `menu/category/{category}`
+      * link `localhost:3000/menu/category/1`
+      * returns the Object for the searched category (only one category is available)
+
+   * Path `menu/item/{item}`
+      * link `localhost:3000/menu/item/1`
+      * returns the Object for the searched menu item
 
 
 * * *
