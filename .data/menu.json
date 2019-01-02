@@ -1,0 +1,187 @@
+{
+   "type" : "Pizzeria Dominos menu",
+   "description" : "This a partial copy from the menu of the Bulgarian site of Dominos, for the purpose of completing the assignment from the 'The Node.js Master Class' with actual data",
+   "categories" : [
+      {
+         "id" : 1,
+         "name" : "Pizzas",
+         "alias" : "pizzas",
+         "description" : ""
+      }
+   ],
+   "sub_categories" : [
+      {
+         "id" : 1,
+         "name" : "Vegetarian",
+         "alias" : "vegetarian",
+         "description" : "",
+         "categories" : [ 1 ]
+      },
+      {
+         "id" : 2,
+         "name" : "Spicy",
+         "alias" : "spicy",
+         "description" : "",
+         "categories" : [ 1 ]
+      },
+      {
+         "id" : 3,
+         "name" : "Fasting",
+         "alias" : "fasting",
+         "description" : "",
+         "categories" : [ 1 ]
+      }
+   ],
+   "items" : [
+      {
+         "id" : 1,
+         "name" : "Margarita",
+         "alias" : "margarita",
+         "description" : "Mozzarella, tomato sauce, extra mozzarella",
+         "categories" : [ 1 ],
+         "sub_categories" : [ 1 ],
+         "size" : [
+            {
+               "name" : "Medium",
+               "slices" : 6,
+               "weight" : "385g"
+            },
+            {
+               "name" : "Large",
+               "slices" : 8,
+               "weight" : "570g"
+            },
+            {
+               "name" : "Jumbo",
+               "slices" : 12,
+               "weight" : "800g"
+            }
+         ]
+      },
+      {
+         "id" : 2,
+         "name" : "Mediterraneo",
+         "alias" : "mediterraneo",
+         "description" : "Mozzarella, tomato sauce, fresh tomatos, green peppers, feta cheese, olives",
+         "categories" : [ 1 ],
+         "sub_categories" : [ 1 ],
+         "size" : [
+            {
+               "name" : "Medium",
+               "slices" : 6,
+               "weight" : "385g"
+            },
+            {
+               "name" : "Large",
+               "slices" : 8,
+               "weight" : "570g"
+            },
+            {
+               "name" : "Jumbo",
+               "slices" : 12,
+               "weight" : "800g"
+            }
+         ]
+      },
+      {
+         "id" : 3,
+         "name" : "American hot",
+         "alias" : "american-hot",
+         "description" : "Tomato sauce, mozzarella, pepperoni, spicy jalapeno peppers, onions",
+         "categories" : [ 1 ],
+         "sub_categories" : [ 2 ],
+         "size" : [
+            {
+               "name" : "Medium",
+               "slices" : 6,
+               "weight" : "385g"
+            },
+            {
+               "name" : "Large",
+               "slices" : 8,
+               "weight" : "570g"
+            },
+            {
+               "name" : "Jumbo",
+               "slices" : 12,
+               "weight" : "800g"
+            }
+         ]
+      },
+      {
+         "id" : 4,
+         "name" : "Fasting pizza",
+         "alias" : "fasting-pizza",
+         "description" : "Tomato sauce,black olives, mushrooms,potatoes,fresh tomatoes, sun-dried tomatoes * may contain traces of lactose *",
+         "categories" : [ 1 ],
+         "sub_categories" : [ 3 ],
+         "size" : [
+            {
+               "name" : "Medium",
+               "slices" : 6,
+               "weight" : "385g"
+            },
+            {
+               "name" : "Large",
+               "slices" : 8,
+               "weight" : "570g"
+            },
+            {
+               "name" : "Jumbo",
+               "slices" : 12,
+               "weight" : "800g"
+            }
+         ]
+      },
+      {
+         "id" : 5,
+         "name" : "Carbonara",
+         "alias" : "carbonara",
+         "description" : "Fresh cream, mozzarella, bacon, mushrooms",
+         "categories" : [ 1 ],
+         "sub_categories" : [ 0 ],
+         "size" : [
+            {
+               "name" : "Medium",
+               "slices" : 6,
+               "weight" : "385g"
+            },
+            {
+               "name" : "Large",
+               "slices" : 8,
+               "weight" : "570g"
+            },
+            {
+               "name" : "Jumbo",
+               "slices" : 12,
+               "weight" : "800g"
+            }
+         ]
+      },
+      {
+         "id" : 6,
+         "name" : "Chick-chi-rick",
+         "alias" : "chick-chi-rick",
+         "description" : "Tomato sauce, mozzarella, lean chicken, melted cheese, sweetcorn",
+         "categories" : [ 1 ],
+         "sub_categories" : [ 0 ],
+         "size" : [
+            {
+               "name" : "Medium",
+               "slices" : 6,
+               "weight" : "385g"
+            },
+            {
+               "name" : "Large",
+               "slices" : 8,
+               "weight" : "570g"
+            },
+            {
+               "name" : "Jumbo",
+               "slices" : 12,
+               "weight" : "800g"
+            }
+         ]
+      }
+   ]
+}
